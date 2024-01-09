@@ -10,7 +10,6 @@ function addToCart(itemName, price, imageUrl) {
     }
 
     updateCartDisplay();
-    // updateSidebar(itemName, price, imageUrl);
     openSidebar();
 }
 
@@ -107,7 +106,7 @@ function toggleSidebar() {
     }
 }
 
-
+/* Item increment function */
 function incrementQuantity(itemName) {
     const item = cart.find(item => item.name === itemName);
     if (item) {
@@ -116,6 +115,8 @@ function incrementQuantity(itemName) {
     }
 }
 
+
+/* Item decrement function */
 function decrementQuantity(itemName) {
     const item = cart.find(item => item.name === itemName);
     if (item && item.quantity > 1) {
